@@ -6,6 +6,29 @@ Uses generator-angular for the Angular side.
 
 Uses Laravel and Composer for the API / backend.
 
+## Setup 
+
+`git clone https://github.com/LunarDevelopment/lav-ang-auth.git DIRECTORYNAME && cd DIRECTORYNAME`
+`composer install`
+`cd inventory-app && npm install && bower install`
+`cd ../ && copy .env.example .env`
+`php artisan key:generate`
+- this alters the .env line `APP_KEY` to contain a unique app key
+- edit the new .env to contain your database details, such as: 
+```
+DB_HOST=localhost
+DB_DATABASE=inventory
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+`php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"`
+`php artisan jwt:generate` 
+`php artisan migrate` 
+`php artisan db:seed` 
+`php artisan serve`
+[localhost](http://localhost:8000/dist/#/)
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

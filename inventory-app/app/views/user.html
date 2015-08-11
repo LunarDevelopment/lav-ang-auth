@@ -11,27 +11,40 @@
   </div>
   <div id="users" class="col s12">
     -->
-    <div class="col-sm-6 col-sm-offset-3">
-      <div class="well">
+<div class="section">
+  <div class="row">
+    <div class="col offset-l1 l10 s12">
+      <div class="card-panel">
         <h5 ng-show="authenticated">Welcome, {{currentUser.name}}</h5>
         <h3>Users</h3>
         <div class="buttons" style="margin-bottom: 10px">
           <button class="btn btn-primary" ng-click="user.getUsers()">Get Users!</button>
           <button class="btn btn-danger" ng-click="user.logout()">Logout</button>
         </div>
-        <ul class="list-group" ng-if="user.users">
-          <li class="list-group-item" ng-repeat="user in user.users">
-            <h4>{{user.name}}</h4>
-            <h5>{{user.email}}</h5>
+
+        <ul class="collapsible" ng-if="user.users" data-collapsible="accordion" watch>
+          <li ng-repeat="user in user.users">
+            <div class="collapsible-header collection-item">
+              <i class="material-icons">person_pin</i> {{user.name}}
+              <span class="badge">ID: {{user.id}}</span>
+            </div>
+            <div class="collapsible-body">
+              <p>
+                {{user.email}}
+              </p>
+            </div>
           </li>
         </ul>
+
         <div class="alert alert-danger" ng-if="user.error">
           <strong>There was an error: </strong> {{user.error.error}}
           <br>Please go back and login again
         </div>
       </div>
     </div>
-    <!--
+  </div>
+</div>
+<!--
   </div>
   <div id="test2" class="col s12">Test 2</div>
   <div id="test3" class="col s12">Test 3</div>
