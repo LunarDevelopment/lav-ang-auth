@@ -1,0 +1,40 @@
+<!-- public/views/userView.html -->
+<!--
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs" tabs>
+      <li class="tab col s3"><a  class="active" href="#users">Users</a></li>
+      <li class="tab col s3"><a href="#test2">Test 2</a></li>
+      <li class="tab col s3"><a href="#test3">Test 3</a></li>
+      <li class="tab col s3"><a href="#test4">Test 4</a></li>
+    </ul>
+  </div>
+  <div id="users" class="col s12">
+    -->
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="well">
+        <h5 ng-show="authenticated">Welcome, {{currentUser.name}}</h5>
+        <h3>Users</h3>
+        <div class="buttons" style="margin-bottom: 10px">
+          <button class="btn btn-primary" ng-click="user.getUsers()">Get Users!</button>
+          <button class="btn btn-danger" ng-click="user.logout()">Logout</button>
+        </div>
+        <ul class="list-group" ng-if="user.users">
+          <li class="list-group-item" ng-repeat="user in user.users">
+            <h4>{{user.name}}</h4>
+            <h5>{{user.email}}</h5>
+          </li>
+        </ul>
+        <div class="alert alert-danger" ng-if="user.error">
+          <strong>There was an error: </strong> {{user.error.error}}
+          <br>Please go back and login again
+        </div>
+      </div>
+    </div>
+    <!--
+  </div>
+  <div id="test2" class="col s12">Test 2</div>
+  <div id="test3" class="col s12">Test 3</div>
+  <div id="test4" class="col s12">Test 4</div>
+</div>
+-->
