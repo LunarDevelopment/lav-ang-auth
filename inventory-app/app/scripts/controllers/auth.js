@@ -15,7 +15,7 @@ angular.module('inventoryApp')
     var credentials = {
       email: vm.email,
       password: vm.password
-    }
+    };
     $auth.login(credentials).then(function() {
       // Return an $http request for the now authenticated
       // user so that we can flatten the promise chain
@@ -43,5 +43,5 @@ angular.module('inventoryApp')
       // the users state to view the data
       $location.path("/user");
     });
-  }
+  };
   });

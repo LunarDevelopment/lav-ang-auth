@@ -21,26 +21,24 @@
           <button class="btn btn-primary" ng-click="user.getUsers()">Get Users!</button>
           <button class="btn btn-danger" ng-click="user.logout()">Logout</button>
         </div>
-
-        <ul class="collapsible" ng-if="user.users" data-collapsible="accordion" watch>
-          <li ng-repeat="user in user.users">
-            <div class="collapsible-header collection-item">
-              <i class="material-icons">person_pin</i> {{user.name}}
-              <span class="badge">ID: {{user.id}}</span>
-            </div>
-            <div class="collapsible-body">
-              <p>
-                {{user.email}}
-              </p>
-            </div>
-          </li>
-        </ul>
-
         <div class="alert alert-danger" ng-if="user.error">
           <strong>There was an error: </strong> {{user.error.error}}
           <br>Please go back and login again
         </div>
       </div>
+      <ul class="collapsible" ng-if="user.users" data-collapsible="accordion" watch>
+        <li ng-repeat="user in user.users">
+          <div class="collapsible-header collection-item">
+            <i class="material-icons">person_pin</i> {{user.name}}
+          </div>
+          <div class="collapsible-body">
+            <p>
+              <span class="blue-text">Email: </span>
+              {{user.email}}
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
