@@ -20,4 +20,35 @@
   position: relative;
   background-image: url('../images/banner.jpg');
 }
+.brand-logo {
+  max-height: 100%;
+}
+#logo-container {
+ padding-top:4px; 
+}
 
+nav {
+  animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite;
+}
+ 
+@keyframes colorchange
+{
+  0%   {background: #039be5;}
+  25%  {background: #ab47bc;}
+  50%  {background: #5c6bc0;}
+  75%  {background: #66BB6A;}
+  100% {background: #039be5;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: #039be5;}
+  25%  {background: #ab47bc;}
+  50%  {background: #5c6bc0;}
+  75%  {background: #66BB6A;}
+  100% {background: #039be5;}
+}
