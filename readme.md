@@ -9,6 +9,8 @@ Uses Laravel and Composer for the API / backend.
 ## Todo
 
 * Bind input maxlength to 140 chars - current selected tweet '@name'..
+* infinite scroll tweet box 
+* example tweets spanning popular social media sectors
 
 ## Setup 
 
