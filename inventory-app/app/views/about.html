@@ -1,44 +1,113 @@
 <div class="row">
-  <div class="input-field col s6">
+  <input-field class="col s6">
     <i class="material-icons prefix">mode_edit</i>
-    <textarea ng-maxlength="120" length="120" id="icon_prefix2" ng-model="about.exampleTweet" class="materialize-textarea"></textarea>
+    <textarea required 
+              ng-minlength="1" 
+              ng-maxlength="120" 
+              length="120" 
+              id="exampleTweet" 
+              ng-model="about.exampleTweet" 
+              type="text" 
+              class="materialize-textarea"></textarea>
     <label for="icon_prefix2">Message</label>
-  </div>
-
-  <div class="col s6">
-    <div class="input-field">
+  </input-field >
+  <div class="col s4">
+    <input-field>
       <i class="material-icons prefix">search</i>
-      <input ng-model="about.searchTerm" type="text" class="validate">
+      <input required ng-minlength="1" 
+             ng-maxlength="120" 
+             ng-model="about.searchTerm" 
+             type="text" 
+             class="validate">
       <label for="icon_prefix"></label>
-    </div>
-
-    <div ng-click="about.getTweets()" class="btn">
+    </input-field>
+  </div>
+  <div class="col s2">
+    <div ng-click="about.twitter.nextPage()" 
+         class="btn-large blue waves-effect waves-light">
       <span>Go!</span>
     </div>
-    <div ng-if="about.tweets !== null" ng-repeat="tweet in about.tweets" class="card">
-      <p>{{tweet.text}}</p>
-    </div>
-    <div ng-if="about.tweets === null" class="card">
+  </div>
+  <div class="col s12">
+    <ul ng-show="about.twitter.tweets.length" 
+        class="collection">
+      <li ng-repeat="tweet in about.twitter.tweets track by $index" 
+          class="collection-item avatar">
+        <img ng-src="{{tweet.user.profile_image_url}}" 
+             alt="" 
+             class="circle">
+        <span class="blue-text text-darken-2 title">{{tweet.user.name}} <small>@{{tweet.user.screen_name}}</small></span>
+        <p>
+          {{tweet.text}}
+        </p>
+        <div class="secondary-content">
+          <a href="" 
+             class="btn waves-effect waves-light pink">
+            <i class="material-icons">info</i>
+          </a>
+          <a href="" 
+             class="btn waves-effect waves-teal">
+            <i class="material-icons">send</i>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <!-- Accordion cards, problem that secondary-content isn't reliable in the headers -->
+    <!-- could go for user info + send button + outreach count in accordion body -->
+    <!--
+    <ul ng-show="about.twitter.tweets.length" class="collapsible popout" data-collapsible="accordion" watch>
+      <li ng-repeat="tweet in about.twitter.tweets track by $index">
+        <div class="collapsible-header waves-effect waves-purple">
+          {{tweet.text}}
+          <a href="" class="secondary-content btn waves-effect waves-teal"><i class="material-icons">send</i></a>
+        </div>
+        <div class="collapsible-body">
+          <p>@{{tweet.user.screen_name}}</p>
+          <p>{{tweet.user.name}}</p>
+          <a href="" class="btn waves-effect waves-teal"><i class="material-icons">send</i></a>
+        </div>
+      </li>
+    </ul>
+    -->
+    <div ng-hide="about.twitter.tweets.length" 
+         class="no-results card">
       <p>Nothing to show..</p>
     </div>
   </div>
 </div>
-<button class="btn" ng-click="about.written()">5</button>
-<button class="btn" ng-click="about.chosen('herp')">50</button>
-<button class="btn" ng-click="about.sendExample()">100</button>
 <div class="row">
+  <div class="col s12 center-align">
+    <button class="btn" 
+            ng-click="about.twitter.nextPage()">
+      Tweets
+    </button>
+    <button class="btn" 
+            ng-click="about.written()">
+      5
+    </button>
+    <button class="btn" 
+            ng-click="about.chosen('herp')">
+      50
+    </button>
+    <button class="btn" 
+            ng-click="about.sendExample()">
+      100
+    </button>
+  </div>
   <div class="offset-s2 col s2 left-align">
-  Herp Derp 
+    Herp Derp
   </div>
   <div class="col s4 center-align">
-  Derp Herp
+    Derp Herp
   </div>
   <div class="col s2 right-align">
-  Complete!
+    Complete!
   </div>
   <div class="offset-s2 col s8">
     <div class="progress">
-      <div class="determinate" ng-style="about.progress"></div>
+      <div class="determinate" 
+           ng-style="about.progress">
+      </div>
     </div>
   </div>
 </div>

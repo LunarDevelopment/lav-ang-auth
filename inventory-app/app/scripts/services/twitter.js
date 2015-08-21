@@ -1,11 +1,12 @@
 'use strict';
 
 /**
- * @ngdoc service
+ * @ngdoc factory
  * @name inventoryApp.twitter
  * @description
  * # twitter
  * Factory in the inventoryApp.
+ * Interacts with the rest Twitter API to retrieve new tweets for user to assess and reply to. 
  */
 angular.module('inventoryApp')
   .factory('Twitter', function ($http) {
@@ -14,18 +15,19 @@ angular.module('inventoryApp')
       this.busy = false;
       this.after = '';
     };
-
     twitter.prototype.nextPage = function () {
       if (this.busy) return;
       this.busy = true;
 
       var url = "exampleTweets.json";
-      $http.jsonp(url).success(function (data) {
-        var tweets = data.data.statuses;
+      $http.get(url).success(function (data) {
+        var tweets = data.statuses;
+        console.log('tweets: ');
+        console.log(tweets);
         for (var i = 0; i < tweets.length; i++) {
-          this.tweets.push(tweets[i].data);
+          this.tweets.push(tweets[i]);
         }
-        this.after = "t3_" + this.tweets[this.tweets.length - 1].id;
+        this.after = this.tweets[this.tweets.length - 1];
         this.busy = false;
       }.bind(this));
     };
