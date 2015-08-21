@@ -11,6 +11,7 @@ Uses Laravel and Composer for the API / backend.
 * Bind input maxlength to 140 chars - current selected tweet '@name'..
 * infinite scroll tweet box 
 * example tweets spanning popular social media sectors
+* could go for user info + send button + outreach count in accordion body 
 
 ## Setup 
 
