@@ -6,6 +6,10 @@ Uses generator-angular for the Angular side.
 
 Uses Laravel and Composer for the API / backend.
 
+## Todo
+
+* Bind input maxlength to 140 chars - current selected tweet '@name'..
+
 ## Setup 
 
 `git clone https://github.com/LunarDevelopment/lav-ang-auth.git DIRECTORYNAME && cd DIRECTORYNAME`
