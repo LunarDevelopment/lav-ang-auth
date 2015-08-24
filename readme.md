@@ -12,6 +12,9 @@ Uses Laravel and Composer for the API / backend.
 * infinite scroll tweet box 
 * example tweets spanning popular social media sectors
 * could go for user info + send button + outreach count in accordion body 
+* search term Web Development => google words to get array of top terms  
+* search for followers of @xxxxx like tweepi 
+
 
 ## Setup 
 

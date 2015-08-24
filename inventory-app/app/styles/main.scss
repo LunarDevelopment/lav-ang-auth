@@ -22,11 +22,11 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $secondary-color; 
-  -webkit-background: $secondary-color; 
+  background: color("light-blue", "darken-1"); 
+  -webkit-background: color("light-blue", "darken-1"); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: $secondary-color; 
+  background: color("light-blue", "darken-1"); 
 }
 
 /* ng-hide Fix. */ 
@@ -71,18 +71,18 @@ nav {
  
 @keyframes colorchange
 {
-  0%   {background: #039be5;}
-  25%  {background: #ab47bc;}
-  50%  {background: #5c6bc0;}
-  75%  {background: $success-color;}
-  100% {background: #039be5;}
+  0%   {background: color("light-blue", "darken-1");}
+  25%  {background: color("purple", "lighten-1");}
+  50%  {background: color("pink", "darken-1");}
+  75%  {background: color("indego", "lighten-1");}
+  100% {background: color("light-blue", "darken-1");}
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
 {
-  0%   {background: #039be5;}
-  25%  {background: #ab47bc;}
-  50%  {background: #5c6bc0;}
-  75%  {background: $success-color;}
-  100% {background: #039be5;}
+  0%   {background: color("light-blue", "darken-1");}
+  25%  {background: color("purple", "lighten-1");}
+  50%  {background: color("pink", "darken-1");}
+  75%  {background: color("indego", "lighten-1");}
+  100% {background: color("light-blue", "darken-1");}
 }
