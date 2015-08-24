@@ -1,4 +1,4 @@
-<div id="index-banner" class="parallax-container paralax-container-main" style="">
+<div id="index-banner" class="parallax-container paralax-container-main">
   <div class="section no-pad-bot">
     <div class="container">
     </div>
@@ -146,7 +146,6 @@
           </input-field>
         </div>
       </div>
-
       <div class="card-panel">
         <div class="row">
           <div class="col s12">
@@ -158,9 +157,9 @@
                   {{tweet.text}}
                 </p>
                 <div class="secondary-content">
-                  <a href="" class="btn waves-effect waves-light pink">
+                  <button ng-click="main.moreInfo(tweet)" class="btn waves-effect waves-light pink">
                     <i class="material-icons">info</i>
-                  </a>
+                  </button>
                   <button ng-disabled="tweet.disabled" class="waves-effect waves-light btn" ng-click="main.step3(tweet)">
                     <i class="material-icons">send</i>
                   </button>

@@ -10,11 +10,65 @@ Uses Laravel and Composer for the API / backend.
 
 * Bind input maxlength to 140 chars - current selected tweet '@name'..
 * infinite scroll tweet box 
+* display how many times your outreached to @xxxx account in results list 
 * example tweets spanning popular social media sectors
 * could go for user info + send button + outreach count in accordion body 
-* search term Web Development => google words to get array of top terms  
+* search term Web Development => google words to get array of top terms http://api.bing.com/osjson.aspx?query=web%20development 5000 /m = free for bing
 * search for followers of @xxxxx like tweepi 
+* adhear to twitters api limits on searches : Requests / 15-min window (user auth) = 180 https://dev.twitter.com/rest/reference/get/search/tweets
+* Team setup to tweet to compiled list of different search terms with custom messages per rep.
+* FAQs & Support Pages
+* Blog 
+* Settings Section
+  - My profile
+  - Avatar, profile, language, logout
+  - Manage my alerts
+  - Edit your alerts settings or delete alert
+  - Manage notifications
+  - Edit your email notification preferences
+  - Manage my data exports
+  - Download your previous mentions exports
+  - Billing
+  - View your invoices
+  - Quota / Plan
+  - Manage your quota and plan
+  - Manage my payment cards
+  - Add, remove, update
+  - Help center
+  - Check our FAQ
+* tweet generator / create fake example tweets and template a message based on search term on example page.
+* style UI based on twitter's button text / layouts etc.
 
+##mention features
+* unread 
+* featured 
+* favourites 
+* activity log 
+
+#SEO 
+* meta name="google-site-verification" content=""
+* ~~meta name="twitter:title" content="Tweads | Generate Warm Leads By Tweeting"~~ 
+* meta name="twitter:description" content="Find out how to get leads by using Twitter to get email addresses from future customers. Tweets enables users to share their email address."
+* meta name="twitter:image" content="https://g.twimg.com/smb/img/meta/twitter-business-2.jpg"
+* meta name="twitter:url" content="https://business.twitter.com/solutions/leads-on-twitter"
+* meta name="twitter:site" content="@TwitterSmallBiz"
+* meta name="twitter:image:width" content="550"
+* meta name="twitter:creator" content="@TwitterSmallBiz"
+* meta name="twitter:image:height" content="323"
+* meta name="twitter:card" content="summary" 
+* meta name="google-site-verification" content="VOL9Qsd-cNMFa87NgJ1CH3c-YicByrmB6U5SYhNEkaY"
+* meta name="og:url" content="https://business.twitter.com/solutions/leads-on-twitter" 
+* meta name="og:image" content="https://g.twimg.com/sites/all/themes/gazebo/img/twitter-business.png" 
+* meta name="og:title" content="Solutions | Twitter for Business" 
+* meta name="og:description" content="Find out how to get leads by using Twitter to get email addresses from future customers. Tweets enables users to share their email address." 
+* meta name="og:type" content="website" 
+* meta name="og:site_name" content="Twitter for Business" 
+* ~~meta name="description" content="Find out how to get leads by using Twitter to get email addresses from future customers. Tweets enables users to share their email address."~~ 
+* ~~meta name="keywords" content="How to get leads"~~ 
+* ~~meta name="generator" content="Drupal 7 (http://drupal.org)"~~
+* meta itemprop="name" content="Mention" 
+* meta itemprop="description" content="Media monitoring made easy with Mention. Create alerts on your name, brand, competitors and be informed in real-time of any mention on the web and social networks" 
+* meta itemprop="image" content="https://en.mention.com//v/nte35z/bundles/mentionweb/v3/img/og-image.png"
 
 ## Setup 
 
