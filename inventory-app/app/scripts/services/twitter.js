@@ -18,9 +18,12 @@ angular.module('inventoryApp')
     twitter.prototype.nextPage = function () {
       if (this.busy) return;
       this.busy = true;
-
       var url = "exampleTweets.json";
-      $http.get(url).success(function (data) {
+      $http({
+        url: url, 
+        method: "GET",
+        params: {count: 100}
+      }).success(function (data) {
         var tweets = data.statuses;
         console.log('tweets: ');
         console.log(tweets);

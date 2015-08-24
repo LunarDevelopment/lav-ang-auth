@@ -13,7 +13,8 @@
         </div>
         <div class="entry-content">
           <div class="col l10 m8 s12">
-            <span class="blue-text"><h4 class="grey-text darken-2 light">
+            <span class="blue-text">
+              <h4 class="grey-text darken-2 light">
                 Application Name
               </h4>
               <h5 class="grey-text darken-2 light">Product Name</h5>
@@ -152,7 +153,10 @@
             <ul ng-show="main.twitter.tweets.length" class="collection">
               <li ng-repeat="tweet in main.twitter.tweets track by $index" class="collection-item avatar" ng-class="tweet.classes">
                 <img ng-src="{{tweet.user.profile_image_url}}" alt="" class="circle">
-                <span class="blue-text text-darken-2 title">{{tweet.user.name}} <small>@{{tweet.user.screen_name}}</small></span>
+                <span class="blue-text text-darken-2 title">
+                  {{tweet.user.name}} 
+                  <small>@{{tweet.user.screen_name}}</small>
+                </span>
                 <p>
                   {{tweet.text}}
                 </p>

@@ -7,7 +7,6 @@ Uses generator-angular for the Angular side.
 Uses Laravel and Composer for the API / backend.
 
 ## Todo
-
 * Bind input maxlength to 140 chars - current selected tweet '@name'..
 * infinite scroll tweet box 
 * display how many times your outreached to @xxxx account in results list 
@@ -45,9 +44,9 @@ Uses Laravel and Composer for the API / backend.
 * favourites 
 * activity log 
 
-#SEO 
+##SEO 
 * meta name="google-site-verification" content=""
-* ~~meta name="twitter:title" content="Tweads | Generate Warm Leads By Tweeting"~~ 
+* ~~meta name="twitter:title" content="Generate Warm Leads By Tweeting | Tweads"~~ 
 * meta name="twitter:description" content="Find out how to get leads by using Twitter to get email addresses from future customers. Tweets enables users to share their email address."
 * meta name="twitter:image" content="https://g.twimg.com/smb/img/meta/twitter-business-2.jpg"
 * meta name="twitter:url" content="https://business.twitter.com/solutions/leads-on-twitter"
